@@ -12,8 +12,8 @@
         else if(localStorage.getItem("meek_theme")=="light"){document.getElementsByTagName("html")[0].attributes.getNamedItem("data-color-mode").value="light";}
     </script>
     
-<meta name="description" content="测试blog——《教父》经典语录">
-<title>测试blog——《教父》经典语录</title>
+<meta name="description" content="War3报内存不能为read错误终于解决了">
+<title>War3报内存不能为read错误终于解决了</title>
 
 
 </head>
@@ -44,7 +44,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1 class="postTitle">测试blog——《教父》经典语录</h1>
+<h1 class="postTitle">War3报内存不能为read错误终于解决了</h1>
 <div class="title-right">
     
     <a href="https://AlbertWang2018.github.io/blog"><button id="buttonHome" class="btn btn-invisible circle" title="首页">
@@ -54,7 +54,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     </button></a>
 
     
-    <a href="https://github.com/AlbertWang2018/blog/issues/1" target="_blank"><button class="btn btn-invisible circle" title="Issue">
+    <a href="https://github.com/AlbertWang2018/blog/issues/3" target="_blank"><button class="btn btn-invisible circle" title="Issue">
         <svg class="octicon" width="16" height="16">
             <path id="pathIssue" fill-rule="evenodd"></path>
         </svg>
@@ -70,32 +70,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>这是一个测试，据说这样可以写blog。</p>
-<p>《教父》——The Godfather</p>
-<p>1: Behind every great fortune, there is a crime.</p>
-<p>巨大财富的背后，都隐藏着罪恶。</p>
-<p>2: Don’t hate your enemy, or you will make wrong judgment.</p>
-<p>不要憎恨你的敌人，那会影响你的判断力。</p>
-<p>3: Keep your friends close, but your enemies closer.</p>
-<p>离你的朋友近些，但离你的敌人要更近，这样你才能更了解他。</p>
-<p>4: I'm gonna make him an offer he can't refuse.</p>
-<p>我将给他一个他无法拒绝的条件。</p>
-<p>5: -Do you spend time with your family?</p>
-<p>-Of course.</p>
-<p>-Good. Because a man that doesn't spend time with his family can never be a real man.</p>
-<p>-你有花时间和你的家人在一起吗?</p>
-<p>-我当然有。</p>
-<p>-很好! 不照顾家人的男人,根本算不上是个男人。</p>
-<p>6: Great men are not born great, they grow great.</p>
-<p>伟大的人不是生下来就伟大的，而是在成长过程中显示其伟大的。</p>
-<p>7: I spent my whole life trying not to be careless. Women and children can be careless. But not men.</p>
-<p>我花了一辈子，才学会了小心。女人和小孩能够粗心大意，但男人不行。</p>
-<p>8: Life is so beautiful.....</p>
-<p>生活是如此的美丽……</p>
-<p>9: You make the choice, and this is your price.</p>
-<p>你做出了这个决定，这是你的代价。</p>
-<p>10: The richest man is the one with the most powerful friends.</p>
-<p>钱与权永不分家。</p></div>
+<div class="markdown-body" id="postBody"><p>从使用win10以来就一直为war3玩dota1偶尔中途报错“内存不能为read”退出，非常扫兴，但一直也没能解决。<br>
+最近电脑启动游戏画面暗，调Gama值无效，应该是Direct 3D驱动不太正常。测试发现war3.exe同级目录下d3d8.dll直接相关，如果有这个文件就正常，没有就画面暗（没有时自动调用win11系统级的相关文件）。画面暗时勉强玩但fps很低，有时低于20，对我而言超过25就不卡就能玩。于是想到应该是这个文件的原因。<br>
+谷歌了下这个文件名，看到github有相关的项目，介绍说是这个文件是负责把d3d 8.0版本转换成9.0的API的，挺重要的。有人就一直修改这个文件保持win10和win11兼容老游戏。我就在我i5-11320H锐炬核显的电脑上，下载了这个文件替换了原来的，再测试，玩了多局都不再报错退出了，应该是好了。<br>
+另一台hp2560p是hd3000的老核显，也同样问题，替换后玩游戏偶尔卡顿但不会报错退出了。以前一感觉到卡顿就报错退出了，报错概率非常大。<br>
+一个困扰了我大约8年的问题，就这样解决了，开心。念念不忘，必有回响。<br>
+dota1我一般带4个简单电脑5V5打疯狂电脑，玩到英雄6级就保存，下次随机一个出来玩，15-20分钟打完，干其它更重要的事，相当于抽了一支烟，Turbo一下大脑。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
