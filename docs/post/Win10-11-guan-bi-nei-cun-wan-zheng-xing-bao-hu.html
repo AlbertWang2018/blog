@@ -10,21 +10,13 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="一个调试软件，一启动就报找不到  sqlite.interop.dll
-
-![error](https://github.com/AlbertWang2018/blog/assets/36392874/b2886cf2-f84b-498a-afa4-1f246a349a07)
-
-但这软件在我电脑上正常的，我判断是win10或11系统环境问题，最大可能是缺少vc运行库。">
-<meta property="og:title" content="启动软件报 sqlite.interop.dll 错误的解决方法">
-<meta property="og:description" content="一个调试软件，一启动就报找不到  sqlite.interop.dll
-
-![error](https://github.com/AlbertWang2018/blog/assets/36392874/b2886cf2-f84b-498a-afa4-1f246a349a07)
-
-但这软件在我电脑上正常的，我判断是win10或11系统环境问题，最大可能是缺少vc运行库。">
+<meta name="description" content="一些程序如果不关闭这个设置无法运行，例如can box驱动装不上。">
+<meta property="og:title" content="Win10/11关闭内存完整性保护">
+<meta property="og:description" content="一些程序如果不关闭这个设置无法运行，例如can box驱动装不上。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://AlbertWang2018.github.io/blog/post/qi-dong-ruan-jian-bao-%20sqlite.interop.dll%20-cuo-wu-de-jie-jue-fang-fa.html">
+<meta property="og:url" content="https://AlbertWang2018.github.io/blog/post/Win10-11-guan-bi-nei-cun-wan-zheng-xing-bao-hu.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
-<title>启动软件报 sqlite.interop.dll 错误的解决方法</title>
+<title>Win10/11关闭内存完整性保护</title>
 
 
 
@@ -57,7 +49,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1 class="postTitle">启动软件报 sqlite.interop.dll 错误的解决方法</h1>
+<h1 class="postTitle">Win10/11关闭内存完整性保护</h1>
 <div class="title-right">
     <a href="https://AlbertWang2018.github.io/blog" id="buttonHome" class="btn btn-invisible circle" title="首页">
         <svg class="octicon" width="16" height="16">
@@ -65,7 +57,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
-    <a href="https://github.com/AlbertWang2018/blog/issues/4" target="_blank" class="btn btn-invisible circle" title="Issue">
+    <a href="https://github.com/AlbertWang2018/blog/issues/8" target="_blank" class="btn btn-invisible circle" title="Issue">
         <svg class="octicon" width="16" height="16">
             <path id="pathIssue" fill-rule="evenodd"></path>
         </svg>
@@ -81,12 +73,23 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>一个调试软件，一启动就报找不到  sqlite.interop.dll</p>
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/AlbertWang2018/blog/assets/36392874/b2886cf2-f84b-498a-afa4-1f246a349a07"><img src="https://github.com/AlbertWang2018/blog/assets/36392874/b2886cf2-f84b-498a-afa4-1f246a349a07" alt="error" style="max-width: 100%;"></a></p>
-<p>但这软件在我电脑上正常的，我判断是win10或11系统环境问题，最大可能是缺少vc运行库。以前我是手动下载安装的，麻烦，目前我找到的最方便的方法是管理员权限powershell运行一条命令：</p>
-<p><code class="notranslate">winget install vcredist </code></p>
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/AlbertWang2018/blog/assets/36392874/5163082c-ea8f-4347-9d8a-2e4f0bde18ee"><img src="https://github.com/AlbertWang2018/blog/assets/36392874/5163082c-ea8f-4347-9d8a-2e4f0bde18ee" alt="image" style="max-width: 100%;"></a></p>
-<p>会自动下载安装，2分钟左右搞定，省事。</p></div>
+<div class="markdown-body" id="postBody"><p>一些程序如果不关闭这个设置无法运行，例如can box驱动装不上。</p>
+<ol>
+<li>
+<p>打开Windows 安全中心：<br>
+点击“开始”菜单，在搜索框中输入“核心隔离”并打开“核心隔离”应用。<br>
+或者，按下 Windows 键+ R，输入 windowsdefender: 并按回车键，然后选择“设备安全性”&gt;[!nav]内核隔离详细信息。</p>
+</li>
+<li>
+<p>关闭内存完整性：</p>
+</li>
+</ol>
+<p>在核心隔离页上，找到“内存完整性”选项，并将其开关关闭。</p>
+<ol start="3">
+<li>重启电脑：</li>
+</ol>
+<p>为确保更改生效，你可能需要重启你的电脑。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/1e2979c6-f587-4292-bcae-b88c044ffe7d"><img width="1202" height="933" alt="Image" src="https://github.com/user-attachments/assets/1e2979c6-f587-4292-bcae-b88c044ffe7d" style="max-width: 100%; height: auto; max-height: 933px;"></a></p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -145,11 +148,7 @@ console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
-cmButton=document.getElementById("cmButton");
-    span=document.createElement("span");
-    span.setAttribute("class","Counter");
-    span.innerHTML="1";
-    cmButton.appendChild(span);
+
 
 
 function openComments(){
